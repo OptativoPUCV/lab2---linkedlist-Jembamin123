@@ -114,3 +114,20 @@ list.c:64:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 1bfc7b7
+Thu 24 Aug 2023 07:00:42 PM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c:56:8: error: redefinition of ‘firstList’
+   56 | void * firstList(List * list) {
+      |        ^~~~~~~~~
+list.c:40:8: note: previous definition of ‘firstList’ was here
+   40 | void * firstList(List * list) {
+      |        ^~~~~~~~~
+list.c: In function ‘firstList’:
+list.c:58:26: error: ‘List’ {aka ‘struct List’} has no member named ‘heat’; did you mean ‘head’?
+   58 |     list->current =list->heat;
+      |                          ^~~~
+      |                          head
+Compilation failed
+e456f53

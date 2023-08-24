@@ -55,8 +55,8 @@ void * nextList(List * list) {
 
 void * firstList(List * list) {
   if (list->head !=NULL){
-    list->current =list->data;
-    return list->current->head;
+    list->current =list->heat;
+    return list->current->data;
   }
   else{
     return NULL;
