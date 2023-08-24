@@ -30,7 +30,7 @@ Node * createNode(void * data) {
 
 List * createList() {
   List* newList =(List*)malloc(sizeof(List));
-  if (newList==NULL){
+  if(newList==NULL){
     exit(EXIT_FAILURE);
   }
   newList->head = NULL;
@@ -46,7 +46,7 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-  if (list->current !=NULL && list->current->next !=NULL){
+  if(list->current !=NULL && list->current->next !=NULL){
     list->current = list->current->next;
     return list->current->data;
   }
@@ -54,7 +54,7 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-  if (list->tail !=NULL){
+  if(list->tail !=NULL){
     list->current =list->tail;
     return list->current->data;
   }
@@ -64,7 +64,7 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-  if (list->current !=NULL && list->current->prev !=NULL) {
+  if(list->current !=NULL && list->current->prev !=NULL) {
       list->current = list->current->prev;
       return list->current->data;
   }
@@ -95,11 +95,38 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+    if(list->current ==NULL){
+      return NULL;
+    }
+    Node* currentNode =list->current;
+    void* data =currentNode->data;
+
+    if(currentNode->prev != NULL){
+      currentNode->prev->next = currentNode->next;
+    } 
+    else{
+      list->head =currentNode->next;
+    }
+  
+    if(currentNode->next !=NULL){
+      currentNode->next->prev = currentNode->prev;
+    } 
+    else{
+      list->tail =currentNode->prev;
+    }
+  
+    if(currentNode->prev ==NULL && currentNode->next ==NULL){
+      list->head =NULL;
+      list->tail =NULL;
+    }
+  
+    list->current =currentNode->next;
+    free(currentNode);
+    return data;
 }
 
 void cleanList(List * list) {
-    while (list->head != NULL) {
+    while (list->head !=NULL){
         popFront(list);
     }
 }
