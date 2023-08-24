@@ -341,3 +341,9 @@ list.c:102:3: error: expected expression before ‘else’
       |   ^~~~
 Compilation failed
 68f8b91
+Thu 24 Aug 2023 08:54:31 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|0
+total_score: 70/70
+fae893f
