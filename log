@@ -143,3 +143,17 @@ list.c:40:8: note: previous definition of ‘firstList’ was here
       |        ^~~~~~~~~
 Compilation failed
 079fd69
+Thu 24 Aug 2023 07:01:58 PM UTC: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:59:25: error: ‘Node’ has no member named ‘tail’
+   59 |     return list->current->tail;
+      |                         ^~
+list.c:64:1: error: control reaches end of non-void function [-Werror=return-type]
+   64 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+4309d9c

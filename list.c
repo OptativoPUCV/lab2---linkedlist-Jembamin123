@@ -53,10 +53,10 @@ void * nextList(List * list) {
   return NULL;
 }
 
-void * firstList(List * list) {
-  if (list->head !=NULL){
-    list->current =list->head;
-    return list->current->data;
+void * lastList(List * list) {
+  if (list->tail != NULL) {
+    list->current = list->tail;
+    return list->current->tail;
   }
   else{
     return NULL;
