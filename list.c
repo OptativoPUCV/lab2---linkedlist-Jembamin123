@@ -72,7 +72,7 @@ void * prevList(List * list) {
       return NULL;
     }
 }
-//===================================================================
+
 void pushFront(List * list, void * data) {
   Node* newNode=createNode(data);
   newNode->next=list->head;
@@ -90,8 +90,11 @@ void pushBack(List * list, void * data) {
   list->current = list->tail;
   pushCurrent(list,data);
 }
-
+//===================================================================
 void pushCurrent(List * list, void * data) {
+  Node* newNode=createNode(data);
+  list->head=newNode;
+  list->tail=newNode;
 }
 
 void * popFront(List * list) {
