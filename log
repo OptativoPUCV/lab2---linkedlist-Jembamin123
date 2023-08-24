@@ -228,3 +228,14 @@ list.c:91:10: error: ‘Node’ has no member named ‘current’
       |          ^~
 Compilation failed
 0abef3b
+Thu 24 Aug 2023 08:26:53 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:90:9: error: variable ‘newNode’ set but not used [-Werror=unused-but-set-variable]
+   90 |   Node* newNode=createNode(data);
+      |         ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+36ef251
