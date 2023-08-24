@@ -309,3 +309,13 @@ Thu 24 Aug 2023 08:41:40 PM UTC:
  tests:  11|1
 total_score: 60/70
 4af3b6b
+Thu 24 Aug 2023 08:44:50 PM UTC: 
+ list.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:111:17: error: expected identifier before ‘=’ token
+  111 |     list->tail->=newNode;
+      |                 ^
+Compilation failed
+177c95c
