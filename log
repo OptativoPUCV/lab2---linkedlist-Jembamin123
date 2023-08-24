@@ -131,3 +131,15 @@ list.c:58:26: error: ‘List’ {aka ‘struct List’} has no member named ‘h
       |                          head
 Compilation failed
 e456f53
+Thu 24 Aug 2023 07:00:49 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c:56:8: error: redefinition of ‘firstList’
+   56 | void * firstList(List * list) {
+      |        ^~~~~~~~~
+list.c:40:8: note: previous definition of ‘firstList’ was here
+   40 | void * firstList(List * list) {
+      |        ^~~~~~~~~
+Compilation failed
+079fd69
