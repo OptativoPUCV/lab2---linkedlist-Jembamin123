@@ -239,3 +239,18 @@ list.c:90:9: error: variable ‘newNode’ set but not used [-Werror=unused-but-
 cc1: all warnings being treated as errors
 Compilation failed
 36ef251
+Thu 24 Aug 2023 08:27:40 PM UTC: 
+ list.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:86:10: error: ‘Node’ has no member named ‘current’
+   86 |   newNode->current=list->head;
+      |          ^~
+list.c: In function ‘pushCurrent’:
+list.c:93:9: error: variable ‘newNode’ set but not used [-Werror=unused-but-set-variable]
+   93 |   Node* newNode=createNode(data);
+      |         ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+259fc87
