@@ -71,3 +71,23 @@ Thu 24 Aug 2023 06:42:26 PM UTC:
  tests:  5|4
 total_score: 25/70
 652a5f8
+Thu 24 Aug 2023 07:00:18 PM UTC: 
+ list.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c:56:8: error: redefinition of ‘firstList’
+   56 | void * firstList(List * list) {
+      |        ^~~~~~~~~
+list.c:40:8: note: previous definition of ‘firstList’ was here
+   40 | void * firstList(List * list) {
+      |        ^~~~~~~~~
+list.c: In function ‘firstList’:
+list.c:59:25: error: ‘Node’ has no member named ‘head’
+   59 |     return list->current->head;
+      |                         ^~
+list.c:64:1: error: control reaches end of non-void function [-Werror=return-type]
+   64 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+60ca9d1

@@ -53,8 +53,14 @@ void * nextList(List * list) {
   return NULL;
 }
 
-void * lastList(List * list) {
+void * firstList(List * list) {
+  if (list->head !=NULL){
+    list->current =list->head;
+    return list->current->head;
+  }
+  else{
     return NULL;
+  }
 }
 
 void * prevList(List * list) {
