@@ -38,7 +38,7 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-  if(list->prev !=NULL){
+  if(list->heat !=NULL){
     list->current =list->head;
     return list->current->data;
   }
