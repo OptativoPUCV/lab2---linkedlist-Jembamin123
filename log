@@ -275,3 +275,19 @@ list.c:98:6: error: ‘lista’ undeclared (first use in this function); did you
       |      list
 Compilation failed
 bb151cc
+Thu 24 Aug 2023 08:41:09 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:86:6: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   86 |   if(lista->tail==NULL){
+      |      ^~~~~
+      |      list
+list.c:86:6: note: each undeclared identifier is reported only once for each function it appears in
+list.c:93:16: error: ‘NewNode’ undeclared (first use in this function); did you mean ‘newNode’?
+   93 |     list->tail=NewNode;
+      |                ^~~~~~~
+      |                newNode
+Compilation failed
+73b2dc3
