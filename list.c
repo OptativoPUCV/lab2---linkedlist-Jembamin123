@@ -90,7 +90,7 @@ void pushBack(List * list, void * data) {
   else{
     list->tail->prev=list->tail;
     list->tail->next=newNode;
-    list->tail=NewNode;
+    list->tail=newNode;
   }
 }
 
